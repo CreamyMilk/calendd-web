@@ -1,6 +1,9 @@
 import Image from 'next/image'
+import { useSession, signIn  } from "next-auth/react"
 
 export default function Home() {
+  const { data: session } = useSession()
+  console.log("Session",session)
   return (
     <>
     <main>
@@ -16,8 +19,9 @@ export default function Home() {
             <small> (coming soon) </small>
           </p>
 
-          <button className="custom_button">
-            Sign In With Twitter
+          <button className="custom_button" onClick={() => signIn()}>
+            {!session ? "Sign In With Twitter":`🥹 Hello ${session.user.name}`}
+          
           </button>
 
           <button className="custom_button learn-more">
