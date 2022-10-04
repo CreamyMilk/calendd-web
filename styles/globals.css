@@ -7,13 +7,19 @@
 
 .page {
   /* background-color: red; */
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin: 20px;
   flex-wrap: wrap;
+}
+
+@media all and (max-width: 900px){
+  .page{
+    justify-content: space-between;
+  }
 }
 
 .cta>p {
