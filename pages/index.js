@@ -35,7 +35,7 @@ export default function Home() {
             width={1239}
             height={798}
             layout={"intrinsic"}
-            src="https://dropyourens.w1nt3r.xyz/hero.png" alt="sadas" />
+            src="/hero.png" alt="sadas" />
         </div>
 
       </section>
